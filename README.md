@@ -18,7 +18,7 @@ CSW does **not** certify PCI compliance. It turns workload communication, proces
 | Document | For | Use it to |
 |---|---|---|
 | **[Reference Design](CSW-PCI-DSS-Reference-Design.md)** | SE / platform / security engineering | Build CSW end-to-end: architecture, scopes, labels, ADM, enforcement, per-requirement evidence |
-| **[Compliance Report (PDF)](CSW-PCI-DSS-Compliance-Report.pdf)** · [DOCX](CSW-PCI-DSS-Compliance-Report.docx) | Compliance team, QSA, exec | Customer-facing coverage mapping (color-coded Direct / Supporting / Evidence Required) |
+| **[Compliance Report](#the-compliance-report--what-your-assessor-gets)** ([PDF](CSW-PCI-DSS-Compliance-Report.pdf) · [DOCX](CSW-PCI-DSS-Compliance-Report.docx)) | Compliance team, QSA, exec | Hand to your assessor: color-coded control-by-control mapping + the exact evidence package (see showcase below) |
 | **[Evidence Checklist](docs/evidence-checklist.md)** | Evidence owner | A printable, per-requirement "what to export, from where, how often" worklist |
 | **[POV / Workshop Plan](docs/pov-plan.md)** | SE + customer | Run a 45-day proof-of-value on one CDE boundary |
 
@@ -90,6 +90,27 @@ CSW produces **direct** evidence for the workload-resident slice of PCI and **su
 | Reqs 3/4/8/9/12 (crypto, physical, policy, HR) | ⚪ Evidence Required | Supplied by other controls / processes |
 
 > Coverage describes what evidence CSW produces — **not** that a control is passed.
+
+---
+
+## The Compliance Report — what your assessor gets
+
+The snapshot above is the teaser. The **[Compliance Report](CSW-PCI-DSS-Compliance-Report.pdf)** is the artifact you actually hand to a QSA — a control-by-control mapping that turns "we use Cisco Secure Workload" into a defensible, color-coded evidence story.
+
+[![PCI DSS v4.0 Compliance Report preview — color-coded control mapping](assets/compliance-report-preview.png)](CSW-PCI-DSS-Compliance-Report.pdf)
+
+*Every PCI requirement, the matching CSW implementation, and a color-coded coverage verdict — green (Direct), amber (Supporting), grey (Evidence Required).* **[Open the full report →](CSW-PCI-DSS-Compliance-Report.pdf)**
+
+### Why an assessor values it
+
+- **Speaks the assessor's language.** Rows are keyed to **Req / Sub-Req** (1.2.1, 6.3.3, 10.2.1, 11.4.1, 12.3.2…) so a QSA can line it up against their RoC work-papers without translation.
+- **One-glance coverage verdict.** The color-coded **Coverage** column shows instantly where CSW is the *primary* evidence source vs. a *supporting* input vs. where **other controls must supply the evidence** — no digging.
+- **Names the exact artifact and where it lives.** The **QSA Evidence Package** table maps each requirement to a specific CSW export (e.g. *Investigate → Flow Search*, *Defend → Policy Workspaces*) and its collection cadence — so the assessor knows precisely what to request and can reproduce it.
+- **Shows isolation as a fact, not a claim.** The CDE scope/segmentation view is backed by enforced default-deny policy and logged denied connections — evidence that the control *operates*, which v4.0's "in place and operating effectively" language demands.
+- **It's honest — and that builds trust.** The report openly flags what CSW does **not** cover (crypto/key management, physical, HR, ASV scans). Assessors trust a vendor mapping far more when it marks its own boundaries instead of claiming everything.
+- **Continuous, not a once-a-year snapshot.** Because every row points at a live, re-exportable CSW artifact, the same report regenerates each quarter — replacing stale annual Visio diagrams and firewall samples.
+
+> It is **evidence**, not an attestation. The QSA still determines compliance status — this report just makes their job faster and your position defensible.
 
 ---
 
