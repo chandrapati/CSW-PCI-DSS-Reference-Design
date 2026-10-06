@@ -87,9 +87,15 @@ CSW produces **direct** evidence for the workload-resident slice of PCI and **su
 | Req 10 — Logging & monitoring | 🟢 Direct | Flow + process telemetry, policy-violation log |
 | Req 11 — Security testing | 🟠 Supporting | ADM baseline-deviation, pre/post-pentest diff |
 | Req 2 — Secure configuration | 🟠 Supporting | Process/vuln signals feed hardening evidence |
-| Reqs 3/4/8/9/12 (crypto, physical, policy, HR) | ⚪ Evidence Required | Supplied by other controls / processes |
+| Reqs 3/4/8/9/12 (crypto, physical, policy, HR) | ⚪ Evidence Required | Supplied **outside CSW** — key mgmt / physical / HR / ASV scans |
 
-> Coverage describes what evidence CSW produces — **not** that a control is passed.
+**Coverage key**
+
+- 🟢 **Direct** — CSW produces the **primary evidence** artifact for the requirement.
+- 🟠 **Supporting** — CSW produces an **input that feeds or complements** another control's evidence.
+- ⚪ **Evidence Required** *(supplied outside CSW)* — CSW produces **nothing** here. The requirement is **in scope for compliance but out of scope for CSW**; the customer supplies the evidence through **another control, tool, or process** (e.g. key management/HSM, physical access logs, HR/training records, signed vendor contracts, ASV scans). This marks a **boundary, not a gap or a failure.**
+
+> Coverage describes what evidence CSW produces — **not** that a control is passed, and ⚪ never means a control is unsupported.
 
 ---
 
@@ -99,7 +105,7 @@ The snapshot above is the teaser. The **[Compliance Report](CSW-PCI-DSS-Complian
 
 [![PCI DSS v4.0 Compliance Report preview — color-coded control mapping](assets/compliance-report-preview.png)](CSW-PCI-DSS-Compliance-Report.pdf)
 
-*Every PCI requirement, the matching CSW implementation, and a color-coded coverage verdict — green (Direct), amber (Supporting), grey (Evidence Required).* **[Open the full report →](CSW-PCI-DSS-Compliance-Report.pdf)**
+*Every PCI requirement, the matching CSW implementation, and a color-coded coverage verdict — green (Direct), amber (Supporting), grey (Evidence Required — supplied outside CSW).* **[Open the full report →](CSW-PCI-DSS-Compliance-Report.pdf)**
 
 ### Why an assessor values it
 

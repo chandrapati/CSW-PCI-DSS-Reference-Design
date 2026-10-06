@@ -150,7 +150,10 @@ flowchart LR
 
 ## 3. Requirement-by-requirement implementation
 
-> Coverage legend — 🟢 **Direct** (CSW produces the primary artifact) · 🟠 **Supporting** (CSW feeds another control) · ⚪ **Evidence Required** (supplied elsewhere).
+> **Coverage legend**
+> - 🟢 **Direct** — CSW produces the primary evidence artifact.
+> - 🟠 **Supporting** — CSW produces an input that feeds/complements another control.
+> - ⚪ **Evidence Required** *(supplied outside CSW)* — CSW produces nothing for this item; it is in scope for compliance but out of scope for CSW, so the customer evidences it via another control, tool, or process (key management/HSM, physical access, HR/training, vendor contracts, ASV scans). A **scope boundary, not a gap or failure** — and not "unsupported."
 
 ### Requirement 1 — Network Security Controls  🟢
 
@@ -248,6 +251,8 @@ Run a scoped proof-of-value before an estate-wide rollout. The full day-by-day p
 ---
 
 ## 6. What CSW does not cover
+
+> These are the ⚪ **Evidence Required** items from §3 — in scope for compliance but **out of scope for CSW**. They are **not** product gaps or unsupported controls; the evidence simply comes from another control, tool, or process, and the customer owns it.
 
 CSW addresses the **workload-resident** slice: segmentation, flows, process context, vulnerability reachability, and change drift. It does **not** produce evidence for, and does not replace:
 
