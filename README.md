@@ -136,4 +136,4 @@ The snapshot above is the teaser. The **[Compliance Report](CSW-PCI-DSS-Complian
 
 This repository is for informational and planning purposes. It is **not** legal, regulatory, audit, or certification advice, and it is **not** a PCI attestation. Validate all requirement references against the current official [PCI DSS v4.0](https://www.pcisecuritystandards.org/) text, your environment, and your QSA. Replace any bracketed fields before customer delivery.
 
-*Part of the Cisco Secure Workload compliance reference-design series. Umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Mapping).*
+*Part of the Cisco Secure Workload compliance reference-design series. Umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Reference-Designs).*

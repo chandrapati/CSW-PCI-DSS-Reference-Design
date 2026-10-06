@@ -289,7 +289,7 @@ Cisco Secure Workload (CSW) is a **workload-protection platform**. A lightweight
 - **DORA (EU 2022/2554)** — EU payment-services entities share substantial PCI ↔ DORA Pillar 1 evidence.
 - **NIST SP 800-207** — the zero-trust segmentation pattern underneath PCI Reqs 1, 7, 11.
 
-See the umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Mapping).
+See the umbrella index: [CSW-Compliance-Mapping](https://github.com/chandrapati/CSW-Compliance-Reference-Designs).
 
 ---
 
