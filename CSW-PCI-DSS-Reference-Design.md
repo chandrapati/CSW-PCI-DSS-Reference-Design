@@ -98,6 +98,8 @@ flowchart LR
 
 This is the end-to-end path from "CSW installed" to "QSA-ready evidence." Steps 1–4 stand it up; 5–6 keep it compliant.
 
+![The six-step CSW build for PCI DSS — from instrumenting in-scope workloads to a repeatable quarterly binder, with exit criteria and the evidence each step produces](assets/csw-six-step-build.png)
+
 ```mermaid
 flowchart LR
     S1[1 Instrument] --> S2[2 Label & scope]
